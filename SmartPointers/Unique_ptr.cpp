@@ -8,7 +8,26 @@
 // 		○ Delete copy constructor and copy assignment to enforce unique ownership.
 // Overload operator* and operator-> for object access.
 
+template <typename T>
 class myUniquePtr{
+
+private:
+    T* ptr;
+
+public:
+    myUniquePtr(T* ptr)
+    {
+        this->ptr = ptr;
+    }
     
+    ~myUniquePtr()
+    {
+        delete ptr;
+    }
+
+    myUniquePtr(myUniquePtr&& other){
+        other.ptr = mull
+    }
+
 
 };
