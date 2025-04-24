@@ -1,0 +1,49 @@
+Here’s a step-by-step roadmap to implement a custom Vector class in C++:
+
+Step-by-Step Guide
+	1.	Class Declaration (Template-Based)
+	•	Define a template class Vector<T> to support generic data types.
+	•	Declare private members for:
+	•	A dynamically allocated array (T* data).
+	•	Current size (size_t size).
+	•	Current capacity (size_t capacity).
+	2.	Default Constructor
+	•	Initialize an empty vector with a small default capacity.
+	3.	Parameterized Constructor
+	•	Allow initialization with a specific size and optional default values.
+	4.	Destructor
+	•	Implement a destructor to free dynamically allocated memory.
+	5.	Copy Constructor
+	•	Perform a deep copy of another Vector<T> instance.
+	6.	Move Constructor
+	•	Implement move semantics to efficiently transfer ownership of resources.
+	7.	Copy Assignment Operator
+	•	Implement deep copy for assignment.
+	8.	Move Assignment Operator
+	•	Implement efficient transfer of ownership during assignment.
+	9.	Dynamic Resizing Logic
+	•	Implement an internal resize() function to allocate new memory when the vector exceeds capacity.
+	•	Use a growth strategy (e.g., double the capacity when full).
+	10.	Implement Core Methods
+	•	push_back(const T&): Append an element, resizing if needed.
+	•	pop_back(): Remove the last element.
+	•	size(): Return the current number of elements.
+	•	capacity(): Return the allocated capacity.
+	•	reserve(size_t): Preallocate memory to avoid frequent resizing.
+	11.	Overload Element Access Operators
+	•	Overload operator[] for direct element access (without bounds checking).
+	•	Implement at(size_t) for safe access with bounds checking.
+	12.	Implement Iterators for Traversal
+	•	Define begin() and end() functions returning pointers or custom iterator objects.
+	•	Implement a basic iterator class if needed.
+	13.	Testing and Validation
+	•	Validate dynamic resizing, copying, moving, and iterator behavior.
+	•	Check for memory leaks and efficient resource management.
+	14.	Optimization and Edge Cases
+	•	Handle edge cases such as:
+	•	Pushing to an empty vector.
+	•	Accessing elements beyond bounds.
+	•	Self-assignment in copy operations.
+	•	Optimize memory reallocation to reduce unnecessary copying.
+
+If you encounter any issues while implementing this, feel free to ask for guidance!
